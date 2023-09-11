@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: "ubuntu"
+    environment:
+      TZ: Japan
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ./workspace:/root/workspace
+    working_dir: "/root/workspace"
