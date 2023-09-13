@@ -15,4 +15,5 @@ RUN apt-get update -y --fix-missing \
     gdb \
     tree \
     psmisc \
-    net-tools
+    net-tools \
+    iputils-ping
