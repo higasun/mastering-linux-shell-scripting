@@ -1,0 +1,12 @@
+version: '3.7'
+services: 
+  web:
+    build: 
+      context: "."
+      dockerfile: ./Dockerfile
+    container_name: "centos_apache"
+    ports:
+      - 8080:80
+    volumes:
+      - "./:/root/workspace"
+    privileged: true
